@@ -44,11 +44,11 @@ module "eks" {
       name         = "gitops"
       min_size     = 1
       max_size     = 5
-      desired_size = 3
+      desired_size = 1
 
       #capacity_type  = "SPOT"
-      ami_type       = "AL2_x86_64"
-      instance_types = ["t2.micro"]
+      ami_type       = "AL2_ARM_64"
+      instance_types = ["t4g.small"]
       # X86 config: t2.micro / AL2_x86_64
       # ARM64 config: t4g.small / AL2_ARM_64
 
